@@ -1,0 +1,13 @@
+# investigate, what's means 
+# 1. temperature
+# 2. model
+# 3. roles
+# 4. engine
+# 5. max_tokens
+# 6. stop
+# 7. presence_penalty
+# 8. frequency_penalty
+# 9. best_of
+# 10. messages vs. prompt
+# 11. Chat vs. Completion
+# 12Chat - wnen start new and how to use old?
