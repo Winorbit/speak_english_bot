@@ -10,21 +10,21 @@ if __name__ == "__main__":
     model = os.getenv("OPENAI_MODEL")
     temperature = float(os.getenv("OPENAI_TEMPERATURE"))
     max_tokens = int(os.getenv("OPENAI_MAX_TOKENS"))
-    system_level_message_text = os.getenv("HELP_LEAN_ENGLISH_SYSTEM_LEVEL_MESSAGE")
+    system_level_message_text = os.getenv("HELP_LEARN_ENGLISH_SYSTEM_LEVEL_MESSAGE")
 
     # Checking if environment variables are set
     assert openapi_key, "OPENAI_API_KEY is not set"
     assert model, "OPENAI_MODEL is not set"
     assert temperature, "OPENAI_TEMPERATURE is not set"
     assert max_tokens, "OPENAI_MAX_TOKENS is not set"
-    assert system_level_message_text, "HELP_LEAN_ENGLISH_SYSTEM_LEVEL_MESSAGE is not set"
+    assert system_level_message_text, "HELP_LEARN_ENGLISH_SYSTEM_LEVEL_MESSAGE is not set"
 
     # Getting input message
     if len(sys.argv) > 1:
         input_message = sys.argv[1]
     else:
         logging.error("Input message is empty")
-    raise Exception("Input message is empty")
+        raise Exception("Input message is empty")
 
     # Creating messages to send to OpenAI API
     system_level_message = {"role": "system", "content": system_level_message_text}
